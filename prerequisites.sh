@@ -13,5 +13,10 @@ ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 brew install node
 
 sudo npm install -g grunt-cli
-sudo npm install -g yo
+sudo npm install -g grunt-init
 sudo npm install -g bower
+sudo npm install -g wc
+sudo npm install -g assetr
+
+# install quicklooks
+brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql webp-quicklook suspicious-package
