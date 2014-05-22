@@ -24,12 +24,11 @@ DISABLE_AUTO_TITLE="true"
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 COMPLETION_WAITING_DOTS="true"
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(sublime)
+# sublime : so just type `stt` on the console :)
+plugins=(sublime osx web-search)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
+# make sure /usr/local/bin in the front so we use `brew` tools
 export PATH="/usr/local/bin:$PATH:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/local/git/bin:/usr/local/share/npm/bin"
