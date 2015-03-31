@@ -13,7 +13,7 @@ alias hyper fn;ctrl
 # quick focus alias
 alias browser 'Google Chrome'
 alias editor  'Sublime Text'
-bind  c:${hyper} focus ${browser}
+bind  b:${hyper} focus ${browser}
 bind  e:${hyper} focus ${editor}
 
 # Shows app icons and background apps, spreads icons in the same place.

@@ -3,11 +3,8 @@
 # install `oh-my-zsh`
 curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
 
-# install `Slate`
-cd /Applications && curl http://www.ninjamonkeysoftware.com/slate/versions/slate-latest.tar.gz | tar -xz
-
 # install `brew`
-ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # install nodejs
 brew install node
@@ -17,7 +14,6 @@ brew install moreutils
 brew install findutils
 brew install gnu-sed --default-names
 brew install wget --enable-iri
-
 brew install vim --override-system-vi
 brew install homebrew/dupes/grep
 brew install homebrew/dupes/screen
@@ -52,4 +48,5 @@ brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch 
 brew cask install vagrant
 brew cask install virtualbox
 
+# cleanups
 brew cleanup
