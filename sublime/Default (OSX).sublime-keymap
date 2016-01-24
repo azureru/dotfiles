@@ -1,4 +1,0 @@
-[
-    { "keys": ["f1"], "command": "goto_documentation" },
-    { "keys": ["ctrl+super+n"], "command": "template_ninja_new_file"}
-]

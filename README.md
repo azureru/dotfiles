@@ -13,6 +13,5 @@ Clone the repository first into a random folder and then execute `./bootstrap.sh
 
 # Dotfiles Contained
 
-- oh-my-zsh (https://github.com/robbyrussell/oh-my-zsh)
 - Slate (https://github.com/jigish/slate)
 - Homebrew (http://brew.sh/)
