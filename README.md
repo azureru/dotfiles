@@ -7,9 +7,11 @@ fork it from Mathias's https://github.com/mathiasbynens/dotfiles/
 
 Clone the repository first into a random folder and then execute `./bootstrap.sh`
 
-    git clone https://github.com/azureru/dotfiles.git
-    cd dotfiles
-    ./bootstrap.sh
+```
+git clone https://github.com/azureru/dotfiles.git
+cd dotfiles
+./bootstrap.sh
+```
 
 # Dotfiles Contained
 

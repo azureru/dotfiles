@@ -100,48 +100,8 @@ brew install tree
 brew install webkit2png
 brew install zopfli
 
-# Remove outdated versions from the cellar.
-brew cleanup
-
-# Install GNU core utilities (those that come with OS X are outdated)
-brew install coreutils
-echo "Don’t forget to add $(brew --prefix coreutils)/libexec/gnubin to \$PATH."
-
-# Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
-brew install findutils
-
-# Install wget with IRI support
-brew install wget --enable-iri
-
-# Install more recent versions of some OS X tools
-brew tap homebrew/dupes
-brew install homebrew/dupes/grep
-
-# Install everything else
-brew install ack
-#brew install exiv2
-brew install git
-#brew install imagemagick
-brew install lynx
-brew install node
-brew install rename
-brew install tree
-
-# Remove outdated versions from the cellar
-brew cleanup
-
 # install nodejs
 brew install node
-
-# utils
-brew install moreutils
-brew install findutils
-brew install gnu-sed --default-names
-brew install wget --enable-iri
-brew install vim --override-system-vi
-brew install homebrew/dupes/grep
-brew install homebrew/dupes/screen
-brew install homebrew/php/php55 --with-gmp
 
 # install basic nodejs tools
 sudo npm install -g grunt-cli
@@ -149,6 +109,7 @@ sudo npm install -g grunt-init
 sudo npm install -g bower
 sudo npm install -g wc
 sudo npm install -g assetr
+sudo npm install -g phantomjs
 
 # brew cask to enable install UI applications
 brew tap phinze/cask
@@ -162,8 +123,8 @@ brew cask install firefox
 brew cask install iterm2
 
 # image optim
-cask install imagealpha 2> /dev/null
-cask install imageoptim 2> /dev/null
+brew cask install imagealpha 2> /dev/null
+brew cask install imageoptim 2> /dev/null
 
 # install advanced quicklook plugins
 brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql webp-quicklook suspicious-package
