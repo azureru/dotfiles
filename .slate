@@ -1,5 +1,4 @@
 # SLATE CONFIG
-
 config defaultToCurrentScreen true
 config secondsBeforeRepeat 0.4
 config secondsBetweenRepeat 0.1
@@ -13,20 +12,11 @@ alias hyper fn;ctrl
 # quick focus alias
 alias browser 'Google Chrome'
 alias editor  'Sublime Text'
-bind  b:${hyper} focus ${browser}
-bind  e:${hyper} focus ${editor}
 
 # Shows app icons and background apps, spreads icons in the same place.
 config windowHintsShowIcons true
 config windowHintsIgnoreHiddenWindows true
 config windowHintsSpread true
-
-# Windows Hint
-bind h:${hyper} hint QWERASDFZXCV # QWERTY lefthanded
-bind r:${hyper} relaunch
-
-# Grid Padding 6x2 on monitor 0 and 8x3 on monitor 1
-bind g:${hyper} grid padding:5 0:6,2 #1:8,3 2:6,6
 
 # Abstract positions definitions
 alias full move screenOriginX;screenOriginY screenSizeX;screenSizeY
@@ -39,16 +29,27 @@ alias bottomright corner bottom-right resize:screenSizeX/2;screenSizeY/2
 alias tophalf move screenOriginX;screenOriginY screenSizeX;screenSizeY/2
 alias bottomhalf move screenOriginX;screenOriginY+screenSizeY/2 screenSizeX;screenSizeY/2
 
-# Custom Key Binding
-bind 1:${hyper} ${lefthalf}
-bind 2:${hyper} ${full}
-bind 3:${hyper} ${righthalf}
-bind 4:${hyper} ${tophalf}
-bind 5:${hyper} ${bottomhalf}
-
 # Custom Layout
 layout 1monitor 'Sublime Text':REPEAT ${full}
 layout 1monitor 'iTunes':REPEAT ${full}
 layout 1monitor 'Google Chrome':REPEAT ${full}
 
+# bindings
 bind p:${hyper} layout 1monitor
+
+#bind  b:${hyper} focus ${browser}
+#bind  e:${hyper} focus ${editor}
+
+# Grid Padding 6x2 on monitor 0 and 8x3 on monitor 1
+#bind g:${hyper} grid padding:5 0:6,2 #1:8,3 2:6,6
+
+# Windows Hint
+#bind h:${hyper} hint QWERASDFZXCV # QWERTY lefthanded
+#bind r:${hyper} relaunch
+
+# Screen Layouts
+bind 1:${hyper} ${lefthalf}
+bind 2:${hyper} ${full}
+bind 3:${hyper} ${righthalf}
+bind 4:${hyper} ${tophalf}
+bind 5:${hyper} ${bottomhalf}
