@@ -13,8 +13,6 @@ cd dotfiles
 ./bootstrap.sh
 ```
 
-# Brew.sh
-
 # Dotfiles Contained
 
 - Slate (https://github.com/jigish/slate)

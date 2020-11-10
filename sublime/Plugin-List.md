@@ -1,9 +1,14 @@
-- TrailingSpaces
-- Alignment
-- DocBlockr
-- Git
-- Package Control (doh)
 - SidebarEnhancements
+- Dockerfile syntax highlight
+- EditorConfig
+- Pretty JSON
+- Alignment
+- GitGutter
+- BracketHighligter
+- DocBlockr
+
+- TrailingSpaces
+- Git
 - Sublime Linter
 - CodeLinter
 - TemplateNinja

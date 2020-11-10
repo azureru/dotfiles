@@ -1,25 +1,27 @@
-#!/bin/zsh
+#!/usr/bin/env bash
 
-cd "$(dirname "${BASH_SOURCE}")"
-git pull
+cd "$(dirname "${BASH_SOURCE}")";
+
+git pull origin main;
 
 function doIt() {
-	rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" --exclude "README.md" -av . ~
+    rsync --exclude ".git/" \
+        --exclude ".DS_Store" \
+        --exclude ".osx" \
+        --exclude "bootstrap.sh" \
+        --exclude "README.md" \
+        --exclude "LICENSE-MIT.txt" \
+        -avh --no-perms . ~;
+    source ~/.bash_profile;
 }
 
-# Install antigen
-# mkdir -p ~/.antigen/
-# cd ~/.antigen/
-# git clone https://github.com/zsh-users/antigen.git
-
-# Install zprezto
-# git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
-# setopt EXTENDED_GLOB
-# for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
-#   ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
-# done
-
-# do it!
-unset doIt
-chsh -s /usr/local/bin/zsh
-source ~/.zshrc
+if [ "$1" == "--force" -o "$1" == "-f" ]; then
+    doIt;
+else
+    read -p "This may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1;
+    echo "";
+    if [[ $REPLY =~ ^[Yy]$ ]]; then
+        doIt;
+    fi;
+fi;
+unset doIt;
